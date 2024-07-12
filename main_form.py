@@ -10,7 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import diary_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -63,13 +62,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.tools)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.selDB = QtWidgets.QPushButton(self.tools)
-        self.selDB.setMinimumSize(QtCore.QSize(0, 45))
+        self.selDB.setMinimumSize(QtCore.QSize(100, 45))
+        self.selDB.setMaximumSize(QtCore.QSize(100, 16777215))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/images/img/db.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.selDB.setIcon(icon)
         self.selDB.setIconSize(QtCore.QSize(24, 24))
         self.selDB.setObjectName("selDB")
-        self.horizontalLayout_4.addWidget(self.selDB, 0, QtCore.Qt.AlignLeft)
+        self.horizontalLayout_4.addWidget(self.selDB)
+        self.db_name = QtWidgets.QLabel(self.tools)
+        self.db_name.setText("")
+        self.db_name.setObjectName("db_name")
+        self.horizontalLayout_4.addWidget(self.db_name)
         self.horizontalLayout.addWidget(self.tools)
         self.verticalLayout.addWidget(self.header)
         self.body = QtWidgets.QFrame(self.centralwidget)

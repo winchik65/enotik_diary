@@ -111,12 +111,18 @@
           <number>1</number>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item alignment="Qt::AlignLeft">
+          <item>
            <widget class="QPushButton" name="selDB">
             <property name="minimumSize">
              <size>
-              <width>0</width>
+              <width>100</width>
               <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
              </size>
             </property>
             <property name="text">
@@ -131,6 +137,13 @@
               <width>24</width>
               <height>24</height>
              </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="db_name">
+            <property name="text">
+             <string/>
             </property>
            </widget>
           </item>
